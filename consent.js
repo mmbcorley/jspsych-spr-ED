@@ -121,7 +121,8 @@ const CONSENT_HTML =
         "Information Sheet will be made available on " +
         '<a href = "http://web.inf.ed.ac.uk/infweb/research/study-updates" target = "_blank"> ' +
             'www.web.inf.ed.ac.uk/infweb/research/study-updates' +
-        '</a>.'
+        '</a>.' +
+    "</p>"
     ;
 
 /*

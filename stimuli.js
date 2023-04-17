@@ -409,7 +409,7 @@ const LIST_GROUP2 = [
         item_type : LITDISFLU,
         stimulus :
             "After having three traumatic experiences, the\n" +
-            "kid's #fear #is #um #warranted #I'd #say\n." ,
+            "kid's #fear #is #um #warranted #I'd #say.\n" ,
         question : "",
         qanswer : undefined
     },
