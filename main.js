@@ -107,13 +107,25 @@ let end_practice_screen = {
     }
 };
 
+// function to save data (works in conjunction with write_data.php)
+// pasted in by MC (definitely a downgrade, but should work)
+function saveData(name, data){
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'write_data.php'); // 'write_data.php' is the
+					// path to the php file
+					// described above.
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({filename: name, filedata: data}));
+}
+
 let end_experiment = {
     type : jsPsychHtmlKeyboardResponse,
     stimulus : POST_TEST_INSTRUCTION,
     choices : [],
     on_load: function() {
         if (consent_given) {
-            uil.saveData();
+	    //            uil.saveData();
+	    saveData("DATA_".concat(subject_id),jsPsych.data.get().csv())
         }
         else {
             document.body.innerHTML = FINISHED_NO_CONSENT;
