@@ -133,11 +133,16 @@ let end_experiment = {
     }
 };
 
+/* NB final_trial is not used any more.  Please update the prolific code in
+   instructions.js by changing the definition of POST_TEST_INSTRUCTION
+   ************************************************************************
+   
 let final_trial = {
     type : jsPsychHtmlKeyboardResponse,
     stimulus : `<p><a href="https://app.prolific.co/submissions/complete?cc=XXXXXXX">Click here to return to Prolific and complete the study</a>.</p>`,
-  choices: "NO_KEYS"
+    choices: "NO_KEYS"
 }
+*/
 
 /**
  * Randomize a table of stimuli
@@ -207,10 +212,6 @@ function getTimeline(table) {
 
     timeline.push(test);
     timeline.push(end_experiment);
-
-    // new item to return to prolific
-
-    timeline.push(final_trial);
     
     return timeline;
 }
@@ -221,6 +222,20 @@ function main() {
     //uil.setAccessKey(ACCESS_KEY);
     uil.stopIfExperimentClosed();
 
+    // capture info from Prolific
+    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+    console.log("subject id = " + subject_id);
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        list: list_name
+    });
+    
     // Option 1: client side randomization:
     let stimuli = pickRandomList();
     kickOffExperiment(getTimeline(stimuli.table), stimuli.list_name);
@@ -242,18 +257,6 @@ function main() {
 
 // this function will eventually run the jsPsych timeline
 function kickOffExperiment(timeline, list_name) {
-
-    // capture info from Prolific
-    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
-    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
-    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
-
-    jsPsych.data.addProperties({
-        subject: subject_id,
-        study_id: study_id,
-        session_id: session_id,
-        list: list_name
-    });
 
     // Start jsPsych when running on a Desktop or Laptop style pc.
     uil.browser.rejectMobileOrTablet();
