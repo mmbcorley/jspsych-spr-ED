@@ -229,11 +229,10 @@ function main() {
 
     console.log("subject id = " + subject_id);
 
-    jsPsych.data.addProperties({
+   jsPsych.data.addProperties({
         subject: subject_id,
         study_id: study_id,
-        session_id: session_id,
-        list: list_name
+        session_id: session_id
     });
     
     // Option 1: client side randomization:
@@ -259,7 +258,13 @@ function main() {
 function kickOffExperiment(timeline, list_name) {
 
     // Start jsPsych when running on a Desktop or Laptop style pc.
-    uil.browser.rejectMobileOrTablet();
+ 
+
+    jsPsych.data.addProperties({
+	list: list_name
+    });
+     
+    
     jsPsych.run(timeline);
 }
 
