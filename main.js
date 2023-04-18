@@ -5,7 +5,12 @@ let jsPsych = initJsPsych({
     }
 });
 
- // I liked RandomError too :-)
+// capture info from Prolific
+const subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+const study_id = jsPsych.data.getURLVariable('STUDY_ID');
+const session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+// I liked RandomError too :-)
 class SprRandomizationError extends Error {
     constructor(message) {
         super(message);
@@ -222,11 +227,6 @@ function main() {
     //uil.setAccessKey(ACCESS_KEY);
     uil.stopIfExperimentClosed();
 
-    // capture info from Prolific
-    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
-    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
-    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
-
     console.log("subject id = " + subject_id);
 
    jsPsych.data.addProperties({
@@ -258,7 +258,9 @@ function main() {
 function kickOffExperiment(timeline, list_name) {
 
     // Start jsPsych when running on a Desktop or Laptop style pc.
- 
+
+    console.log("in kOE, subject id = " + subject_id);
+    
 
     jsPsych.data.addProperties({
 	list: list_name
