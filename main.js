@@ -5,10 +5,6 @@ let jsPsych = initJsPsych({
     }
 });
 
-// capture info from Prolific
-const subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
-const study_id = jsPsych.data.getURLVariable('STUDY_ID');
-const session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
 // I liked RandomError too :-)
 class SprRandomizationError extends Error {
@@ -227,8 +223,16 @@ function main() {
     //uil.setAccessKey(ACCESS_KEY);
     //uil.stopIfExperimentClosed();
 
+    // capture info from Prolific
+    const subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    const study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    const session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+    
     console.log("subject id = " + subject_id);
 
+
+    
    jsPsych.data.addProperties({
         subject: subject_id,
         study_id: study_id,
