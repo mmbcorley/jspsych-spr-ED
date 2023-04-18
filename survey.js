@@ -24,8 +24,8 @@ const AGE_HTML = `
     <br>
     <br>
 
-    <label for="native_language">What is your native language?</label>
-    <input type="text" id="native_language" name="native_language" placeholder="Dutch" required>
+    <label for="native_language">Is English your first language?</label>
+    <input type="text" id="native_language" name="native_language" placeholder="Yes/No" required>
     <span class="validity"></span>
     <br>
     <br>
@@ -138,7 +138,7 @@ let survey_review = {
 
             <div><strong>Birth year</strong>: ${b_year} </div>
             <div><strong>Birth month</strong>: ${b_month} </div>
-            <div><strong>Native language</strong>: ${n_lang} </div>
+            <div><strong>English first language</strong>: ${n_lang} </div>
             <div><strong>Multilingual</strong>: ${bilingual} </div>
             <div><strong>Dyslexic</strong>: ${dyslexic} </div>
             <div><strong>Sex</strong>: ${sex} </div>

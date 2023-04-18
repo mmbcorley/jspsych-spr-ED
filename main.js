@@ -131,6 +131,12 @@ let end_experiment = {
             document.body.innerHTML = FINISHED_NO_CONSENT;
         }
     }
+};
+
+let final_trial = {
+    type : jsPsychHtmlKeyboardResponse,
+    stimulus : `<p><a href="https://app.prolific.co/submissions/complete?cc=XXXXXXX">Click here to return to Prolific and complete the study</a>.</p>`,
+  choices: "NO_KEYS"
 }
 
 /**
@@ -232,17 +238,17 @@ function main() {
 // this function will eventually run the jsPsych timeline
 function kickOffExperiment(timeline, list_name) {
 
-    let subject_id = uil.session.isActive() ?
-        uil.session.subjectId() : jsPsych.randomization.randomID(8);
+    // capture info from Prolific
+    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
-    // data one would like to add to __all__ trials, according to:
-    // https://www.jspsych.org/overview/data/
-    jsPsych.data.addProperties (
-        {
-            subject : subject_id,
-            list : list_name,
-        }
-    );
+    jsPsych.data.addProperties({
+        subject: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        list: list_name
+    });
 
     // Start jsPsych when running on a Desktop or Laptop style pc.
     uil.browser.rejectMobileOrTablet();
