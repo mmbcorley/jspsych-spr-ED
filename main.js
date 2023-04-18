@@ -207,13 +207,18 @@ function getTimeline(table) {
 
     timeline.push(test);
     timeline.push(end_experiment);
+
+    // new item to return to prolific
+
+    timeline.push(final_trial);
+    
     return timeline;
 }
 
 
 function main() {
     // Make sure you have updated your key in globals.js
-    uil.setAccessKey(ACCESS_KEY);
+    //uil.setAccessKey(ACCESS_KEY);
     uil.stopIfExperimentClosed();
 
     // Option 1: client side randomization:
