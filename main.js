@@ -225,7 +225,7 @@ function getTimeline(table) {
 function main() {
     // Make sure you have updated your key in globals.js
     //uil.setAccessKey(ACCESS_KEY);
-    uil.stopIfExperimentClosed();
+    //uil.stopIfExperimentClosed();
 
     console.log("subject id = " + subject_id);
 
