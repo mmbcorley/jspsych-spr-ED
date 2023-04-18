@@ -224,9 +224,9 @@ function main() {
     //uil.stopIfExperimentClosed();
 
     // capture info from Prolific
-    const subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
-    const study_id = jsPsych.data.getURLVariable('STUDY_ID');
-    const session_id = jsPsych.data.getURLVariable('SESSION_ID');
+    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
     
     console.log("subject id = " + subject_id);
