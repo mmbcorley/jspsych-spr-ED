@@ -38,9 +38,9 @@ var uil = {};
         'https://experiment-datastore.acc.lab.hum.uu.nl/api/';
 
     const CLOSED_EXPERIMENT_PAGE_LOCATION =
-        'https://web-experiments.lab.hum.uu.nl/index_files/closed/';
+        'https://dislab.ppls.ed.ac.uk/pages/error.html';
     const CRITICAL_ERROR_PAGE_LOCATION = 
-        'https://web-experiments.lab.hum.uu.nl/index_files/error/';
+        'https://dislab.ppls.ed.ac.uk/pages/error.html';
 
     const DATA_UPLOAD_ENDPOINT = '/upload/';
     const DATA_METADATA_ENDPOINT = '/metadata/';

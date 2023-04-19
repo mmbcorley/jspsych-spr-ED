@@ -35,7 +35,7 @@ else
     (function (context) {
 
         const MOBILE_ERROR_PAGE_LOCATION =
-              'https://web-experiments.lab.hum.uu.nl/index_files/mobile/';
+              'https://dislab.ppls.ed.ac.uk/pages/mobile.html';
 
         let _UA_parser = undefined;
 
