@@ -228,9 +228,6 @@ function main() {
     //uil.setAccessKey(ACCESS_KEY);
     //uil.stopIfExperimentClosed();
     
-    console.log("subject id = " + subject_id);
-
-
     
    jsPsych.data.addProperties({
         subject: subject_id,
@@ -261,15 +258,14 @@ function main() {
 function kickOffExperiment(timeline, list_name) {
 
     // Start jsPsych when running on a Desktop or Laptop style pc.
-
-    console.log("in kOE, subject id = " + subject_id);
+    
     
 
     jsPsych.data.addProperties({
 	list: list_name
     });
      
-    
+    uil.browser.rejectMobileOrTablet();
     jsPsych.run(timeline);
 }
 
