@@ -1,8 +1,4 @@
 let jsPsych = initJsPsych({
-    exclusions: {
-        min_width : MIN_WIDTH,
-        min_height : MIN_HEIGHT
-    }
 });
 
 
@@ -21,6 +17,19 @@ class SprRandomizationError extends Error {
 
 const KEY_CODE_SPACE = ' ';
 const G_QUESTION_CHOICES = [FALSE_BUTTON_TEXT, TRUE_BUTTON_TEXT];
+
+let browser_check = {
+    type: jsPsychBrowserCheck,
+    minimum_width: 1000,
+    minimum_height: 600,
+    inclusion_function: (data) => {
+	return data.mobile === false
+    },
+    exclusion_message: (data) -> {
+	return '<p>You must use a desktop/laptop computer to participate in this experiment.</p>';
+    },
+    features: ["width","height","browser","browser_version","os","fullscreen"]
+};
 
 let welcome_screen = {
     type : jsPsychHtmlKeyboardResponse,
@@ -177,6 +186,9 @@ function randomizeStimuli(table) {
 function getTimeline(table) {
     //////////////// timeline /////////////////////////////////
     let timeline = [];
+
+    // new jsPsych browser checking plugin
+    timeline.push(browser_check);
 
     // Welcome the participant and guide them through the
     // consent forms and survey.
