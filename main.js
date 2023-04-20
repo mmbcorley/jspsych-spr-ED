@@ -25,10 +25,10 @@ let browser_check = {
     inclusion_function: (data) => {
 	return data.mobile === false
     },
-    exclusion_message: (data) -> {
+    exclusion_message: (data) => {
 	return '<p>You must use a desktop/laptop computer to participate in this experiment.</p>';
     },
-    features: ["width","height","browser","browser_version","os","fullscreen"]
+    features: ["mobile","width","height","browser","browser_version","os","fullscreen"]
 };
 
 let welcome_screen = {
