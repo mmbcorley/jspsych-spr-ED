@@ -54,7 +54,7 @@ const POST_TEST_INSTRUCTION =
     "<h1>End of the experiment.</h1>"                                   +
     "<h2>Thank you for your participation.</h2>"                        +
     `<h2><a href="https://app.prolific.co/submissions/complete?cc=C9C9FIRD">` +
-      "Click here to return to Prolific and complete the study</a></h2>";
+      "Click here to return to Prolific and complete the study.</a></h2>";
 
 const FINISHED_NO_CONSENT = 
     "<h1>The experiment finished, because no consent was given.</h1>"    +
