@@ -283,7 +283,7 @@ function kickOffExperiment(timeline, list_name) {
 	list: list_name
     });
      
-    uil.browser.rejectMobileOrTablet();
+//    uil.browser.rejectMobileOrTablet();
     jsPsych.run(timeline);
 }
 
