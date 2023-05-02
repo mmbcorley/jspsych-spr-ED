@@ -105,7 +105,7 @@ const CONSENT_HTML2 =
         "information about how we use your data, go to " +
         '<a href = "https://edin.ac/privacy-research" target = "_blank"> ' +
             'www.edin.ac/privacy-research' +
-        '</a>. '
+        '</a>. ' +
     "</p>" +
     "<p>" +
         "<b>Whom can I contact?</b> If you have any questions about the study, please contact Aida Tarighat at " +
