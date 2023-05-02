@@ -8,7 +8,7 @@ let consent_given = false;
  * It is displayed as html, the current html should be replace with
  * your information letter.
  */
-const CONSENT_HTML =
+const CONSENT_HTML1 =
     "<h3>" +
         "This study was certified according to the Informatics " +
         "Research Ethics Process, RT number 789617." +
@@ -54,8 +54,12 @@ const CONSENT_HTML =
         "However, please note that the sentences cover various topics. If " +
         "you find any of the content difficult, please accept our apologies " +
         "and feel free to withdraw from the study at any time." +
-    "</p>" +
-    "<p>" +
+      "</p>"
+;
+
+
+const CONSENT_HTML2 =
+ "<p>" +
         "<b>Are there any benefits associated with taking part?</b> You will be compensated for your participation through Prolific " +
         "and you will be contributing to research in language studies." +
     "</p>" +
@@ -272,11 +276,20 @@ const CONSENT_HTML_STYLE_UU = `<style>
         </style>
         `;
 
+// page 1 of informed consent
+let consent_page1 = {
+    type: jsPsychHtmlButtonResponse,
+    data: {uil_save : false},
+    stimulus: CONSENT_HTML_STYLE_UU + CONSENT_HTML1,
+    choices: [CONTINUE_BUTTON_TEXT],
+    prompt: ""
+}
+
 // displays the informed consent page
-let consent_block = {
+let consent_page2 = {
     type: jsPsychSurveyMultiSelect,
     data : {uil_save : true},
-    preamble: CONSENT_HTML_STYLE_UU + CONSENT_HTML,
+    preamble: CONSENT_HTML_STYLE_UU + CONSENT_HTML2,
     required_message: IF_REQUIRED_FEEDBACK_MESSAGE,
     button_label: CONTINUE_BUTTON_TEXT,
     questions: [
@@ -333,6 +346,10 @@ let if_node_consent = {
             return true;
         }
     }
+}
+
+let consent_block = {
+    timeline: [consent_page1, consent_page2]
 }
 
 let consent_procedure = {
