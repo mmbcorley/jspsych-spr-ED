@@ -960,8 +960,8 @@ const LIST_GROUP4 = [
 const TEST_ITEMS = [
     {list_name: LISTS[0], table: LIST_GROUP1},
     {list_name: LISTS[1], table: LIST_GROUP2},
-    {list_name: LISTS[1], table: LIST_GROUP3},
-    {list_name: LISTS[1], table: LIST_GROUP4}
+    {list_name: LISTS[2], table: LIST_GROUP3},
+    {list_name: LISTS[3], table: LIST_GROUP4}
     // Add a third list here, put a comma on the
     // end of the line above here.
     // {list_name: LISTS[1], table: LIST_GROUP3}
