@@ -809,7 +809,7 @@ const LIST_GROUP4 = [
         stimulus :
             "The event was chaotic with speakers showing up\n" +
             "late for their slots. I was surprised #by #how\n" +
-            "#um #skilfully #organised #it #was." ,
+            "#um #skilfully #organised #it #was.\n" ,
         question : "Speakers were late for their slots.",
         qanswer : TRUE_BUTTON_TEXT
     },
@@ -855,7 +855,7 @@ const LIST_GROUP4 = [
         stimulus :
             "She has sent you six different texts on how\n" +
             "this relationship is not working. I think #the\n" +
-            "#message #is #confusing #right #now." ,
+            "#message #is #confusing #right #now.\n" ,
         question : "",
         qanswer : undefined
     },
@@ -947,7 +947,7 @@ const LIST_GROUP4 = [
         item_type : LITFLU,
         stimulus :
             "If you practice enough, your #skills #usually\n" +
-            "#get #better #over #time." ,
+            "#get #better #over #time.\n" ,
         question : "",
         qanswer : undefined
     }
