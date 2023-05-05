@@ -353,7 +353,7 @@ const LIST_GROUP2 = [
         item_type : SARCFLU,
         stimulus :
             "The event was chaotic with speakers showing up\n" +
-            "late for their slots. I was surprised #by #how\n" +
+            "late for their slots. I was #surprised #by #how\n" +
             "#skilfully #organised #it was.\n" ,
         question : "Speakers were late for their slots.",
         qanswer : TRUE_BUTTON_TEXT
