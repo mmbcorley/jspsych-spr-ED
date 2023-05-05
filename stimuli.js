@@ -325,7 +325,7 @@ const LIST_GROUP2 = [
         stimulus :
             "You do all the work and your colleagues show up\n" +
             "last minute to take credit for what they haven’t\n" +
-            "done. It’s such a frustrating experience.\n" ,
+            "done. #It’s #such #a #frustrating #experience.\n" ,
         question : "Your colleagues have not contributed enough.",
         qanswer : TRUE_BUTTON_TEXT
     },
