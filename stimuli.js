@@ -263,7 +263,7 @@ const LIST_GROUP1 = [
         id : 24,
         item_type : SARCDISFLU,
         stimulus :
-            "If you practice enough, your skills #usually\n" +
+            "If you practise enough, your skills #usually\n" +
             "#get #um #rusty #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -490,7 +490,7 @@ const LIST_GROUP2 = [
         id : 24,
         item_type : LITDISFLU,
         stimulus :
-            "If you practice enough, your skills #usually\n" +
+            "If you practise enough, your skills #usually\n" +
             "#get #um #better #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -718,7 +718,7 @@ const LIST_GROUP3 = [
         id : 24,
         item_type : SARCFLU,
         stimulus :
-            "If you practice enough, your #skills #usually\n" +
+            "If you practise enough, your #skills #usually\n" +
             "#get #rusty #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -946,7 +946,7 @@ const LIST_GROUP4 = [
         id : 24,
         item_type : LITFLU,
         stimulus :
-            "If you practice enough, your #skills #usually\n" +
+            "If you practise enough, your #skills #usually\n" +
             "#get #better #over #time.\n" ,
         question : "",
         qanswer : undefined
