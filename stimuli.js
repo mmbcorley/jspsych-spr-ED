@@ -263,7 +263,7 @@ const LIST_GROUP1 = [
         id : 24,
         item_type : SARCDISFLU,
         stimulus :
-            "If you practice enough, your skills #usually\n" +
+            "If you practise enough, your skills #usually\n" +
             "#get #um #rusty #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -325,7 +325,7 @@ const LIST_GROUP2 = [
         stimulus :
             "You do all the work and your colleagues show up\n" +
             "last minute to take credit for what they haven’t\n" +
-            "done. It’s such a frustrating experience.\n" ,
+            "done. #It’s #such #a #frustrating #experience.\n" ,
         question : "Your colleagues have not contributed enough.",
         qanswer : TRUE_BUTTON_TEXT
     },
@@ -353,7 +353,7 @@ const LIST_GROUP2 = [
         item_type : SARCFLU,
         stimulus :
             "The event was chaotic with speakers showing up\n" +
-            "late for their slots. I was surprised #by #how\n" +
+            "late for their slots. I was #surprised #by #how\n" +
             "#skilfully #organised #it was.\n" ,
         question : "Speakers were late for their slots.",
         qanswer : TRUE_BUTTON_TEXT
@@ -490,7 +490,7 @@ const LIST_GROUP2 = [
         id : 24,
         item_type : LITDISFLU,
         stimulus :
-            "If you practice enough, your skills #usually\n" +
+            "If you practise enough, your skills #usually\n" +
             "#get #um #better #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -718,7 +718,7 @@ const LIST_GROUP3 = [
         id : 24,
         item_type : SARCFLU,
         stimulus :
-            "If you practice enough, your #skills #usually\n" +
+            "If you practise enough, your #skills #usually\n" +
             "#get #rusty #over #time.\n" ,
         question : "",
         qanswer : undefined
@@ -809,7 +809,7 @@ const LIST_GROUP4 = [
         stimulus :
             "The event was chaotic with speakers showing up\n" +
             "late for their slots. I was surprised #by #how\n" +
-            "#um #skilfully #organised #it #was." ,
+            "#um #skilfully #organised #it #was.\n" ,
         question : "Speakers were late for their slots.",
         qanswer : TRUE_BUTTON_TEXT
     },
@@ -855,7 +855,7 @@ const LIST_GROUP4 = [
         stimulus :
             "She has sent you six different texts on how\n" +
             "this relationship is not working. I think #the\n" +
-            "#message #is #confusing #right #now." ,
+            "#message #is #confusing #right #now.\n" ,
         question : "",
         qanswer : undefined
     },
@@ -946,8 +946,8 @@ const LIST_GROUP4 = [
         id : 24,
         item_type : LITFLU,
         stimulus :
-            "If you practice enough, your #skills #usually\n" +
-            "#get #better #over #time." ,
+            "If you practise enough, your #skills #usually\n" +
+            "#get #better #over #time.\n" ,
         question : "",
         qanswer : undefined
     }
@@ -960,8 +960,8 @@ const LIST_GROUP4 = [
 const TEST_ITEMS = [
     {list_name: LISTS[0], table: LIST_GROUP1},
     {list_name: LISTS[1], table: LIST_GROUP2},
-    {list_name: LISTS[1], table: LIST_GROUP3},
-    {list_name: LISTS[1], table: LIST_GROUP4}
+    {list_name: LISTS[2], table: LIST_GROUP3},
+    {list_name: LISTS[3], table: LIST_GROUP4}
     // Add a third list here, put a comma on the
     // end of the line above here.
     // {list_name: LISTS[1], table: LIST_GROUP3}
